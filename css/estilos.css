@@ -1,0 +1,940 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: (0.5fr, 1fr, 2fr, 0.5fr);
+    grid-template-areas:
+        "header header header"
+        "slide slide slide"
+        "nosotros nosotros nosotros"
+        "footer footer footer"
+}
+
+
+.header {
+    grid-area: header;
+    width: 100%;
+    background-color: white;
+
+}
+
+.header__nav {
+    display: flex;
+    height: 150px;
+    font-size: 15px;
+    background-color: white;
+    justify-content: center;
+}
+
+.header__nav a {
+    color: #5e5c63;
+    background-color: white;
+    margin-right: 35px;
+    margin-left: 35px;
+}
+
+.digipartner__logo {
+    margin-top: 20px;
+}
+
+.slide {
+    grid-area: slide;
+    height: 500px;
+    background-image: url(../Imagenes/agencia-home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nosotros {
+    grid-area: nosotros;
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1fr, 1fr, 0.3fr);
+    grid-template-areas:
+        "nosotros1 nosotros2 nosotros3"
+        "nosotros4 nosotros5 nosotros6"
+        "promesa promesa promesa";
+    justify-items: center;
+    background-color: white
+}
+
+.nosotros1 {
+    grid-area: nosotros1;
+    height: 250px;
+    background-color: white;
+    background-size: contain;
+    text-align: right;
+    color: black;
+    padding-top: 40%;
+    padding-right: 40px;
+
+}
+
+.nosotros2 {
+    grid-area: nosotros2;
+    height: 350px;
+    width: 100%;
+    background-image: url(../imagenes/n1.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.nosotros3 {
+    grid-area: nosotros3;
+    height: 250px;
+    background-color: white;
+    background-size: contain;
+    text-align: left;
+    color: black;
+    padding-top: 40%;
+    padding-left: 40px;
+}
+
+.nosotros4 {
+    grid-area: nosotros4;
+    height: 350px;
+    width: 100%;
+    background-image: url(../Imagenes/n2.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.nosotros5 {
+    grid-area: nosotros5;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    padding-top: 40%;
+}
+
+.nosotros6 {
+    grid-area: nosotros6;
+    height: 350px;
+    width: 100%;
+    background-image: url(../Imagenes/n3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.promesa {
+    grid-area: promesa;
+    width: 100%;
+    height: 200px;
+    display: inline-block;
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding-top: 4%;
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #909090;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+.servicios__titulo {
+    grid-area: slide;
+    height: 500px;
+    background-image: url(../imagenes/slide-servicios.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: 70px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1fr, 0.6fr);
+    grid-template-areas:
+        "redes-img diseño-img desarrollo-img"
+        "redes diseño desarrollo"
+}
+
+.contenedor1 {
+    grid-area: redes-img;
+    justify-items: center;
+    height: 200px;
+    background-image: url(../Imagenes/redes-sociales.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 50px;
+
+
+}
+
+.contenedor2 {
+    grid-area: diseño-img;
+    height: 200px;
+    background-image: url(../Imagenes/diseño-gráfico.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 50px;
+
+}
+
+.contenedor3 {
+    grid-area: desarrollo-img;
+    height: 200px;
+    background-image: url(../Imagenes/desarrollo-web.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 50px;
+
+}
+
+.contenedor4 {
+    grid-area: redes;
+    height: 150px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contenedor4 p {
+    margin: 20px;
+}
+
+.contenedor5 {
+    grid-area: diseño;
+    height: 150px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contenedor5 p {
+    margin: 20px;
+}
+
+.contenedor6 {
+    grid-area: desarrollo;
+    height: 150px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contenedor6 p {
+    margin: 20px;
+}
+
+/* PLANES ESCRITORIO */
+
+.planes__titulo {
+    height: 500px;
+    background-image: url(../imagenes/slide-planes.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: 70px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.planes__main {
+    background-color: #5b5b5b;
+
+
+}
+
+.planes__contenedor {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 400px;
+
+}
+
+.planes__contenedor div {
+    width: 188px;
+    height: 350px;
+    margin-top: 50px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.basico {
+    background-image: url(../imagenes/plan-basico.PNG);
+}
+
+.estandar {
+    background-image: url(../imagenes/plan-standard.PNG);
+}
+
+.avanzado {
+    background-image: url(../imagenes/plan-avanzado.PNG);
+}
+
+.premium {
+    background-image: url(../imagenes/plan-premium.PNG);
+
+}
+
+
+.banner__llamada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+
+}
+
+.planes__frase {
+    color: white;
+    margin-right: 30px;
+}
+
+.boton {
+    background-color: black;
+    height: 60px;
+    border-style: inset;
+    border-color: white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+
+/* CLIENTES ESCRITORIO */
+
+.clientes__titulo {
+    height: 500px;
+    background-image: url(../imagenes/slide-clientes.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    font-size: 70px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clientes__main {
+    background-color: #5b5b5b;
+}
+
+.clientes__contenedor {
+    background-color: #5b5b5b;
+    height: 500px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "cliente1 cliente2 cliente3 cliente4"
+        "cliente5 cliente6 cliente7 cliente8"
+}
+
+.clientes__contenedor div {
+    width: 150px;
+    height: 150px;
+    background-color: mediumpurple;
+    align-self: center;
+    justify-self: center;
+
+
+}
+
+.cliente1 {
+    grid-area: cliente1;
+}
+
+.cliente2 {
+    grid-area: cliente2;
+}
+
+.cliente3 {
+    grid-area: cliente3;
+}
+
+.cliente4 {
+    grid-area: cliente4;
+}
+
+.cliente5 {
+    grid-area: cliente5;
+}
+
+.cliente6 {
+    grid-area: cliente6;
+}
+
+.cliente7 {
+    grid-area: cliente7;
+}
+
+.cliente8 {
+    grid-area: cliente8;
+}
+
+
+/* CONTACTO ESCRITORIO */
+
+.contacto__titulo {
+    margin-top: 20px;
+    height: 100px;
+    font-size: 40px;
+    color: #5b5b5b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mapa {
+    height: 400px;
+}
+
+.contacto {
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr, 2fr, 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        ". formulario ."
+
+}
+
+.formulario {
+    width: 600px;
+    grid-area: formulario;
+    align-self: center;
+    justify-self: center;
+
+}
+
+
+
+
+
+/* VISTA TABLET 768PX */
+
+@media screen and (max-width:768px) {
+
+    /* VISTA TABLET INDEX*/
+
+    .digipartner__logo {
+        width: 60px;
+    }
+
+    .contenedor {
+        grid-template-columns: (1fr, 1fr);
+        grid-template-rows: (1fr, 1fr, 3fr, 1fr);
+        grid-template-areas:
+            "header header"
+            "slide slide"
+            "nosotros nosotros"
+            "footer footer"
+    }
+
+    .header__nav a {
+        margin-left: 8px;
+        margin-right: 8px;
+        justify-content: center;
+    }
+
+    .slide {
+        height: 260px;
+        font-size: 50px;
+    }
+
+    .nosotros {
+        grid-template-columns: (1fr, 1fr);
+        grid-template-rows: (1fr, 1fr, 1fr, 0.5fr);
+        grid-template-areas:
+            "nosotros1 nosotros2"
+            "nosotros4 nosotros3"
+            "nosotros5 nosotros6"
+            "promesa promesa";
+    }
+
+    .nosotros1 {
+        height: 250px;
+        width: 384px;
+        padding-top: 20%;
+        padding-right: 0px;
+        padding-left: 0%;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .nosotros2 {
+        height: 250px;
+        width: 384px;
+        padding-top: 0%;
+        padding-right: 0px;
+    }
+
+    .nosotros4 {
+        height: 250px;
+        width: 384px;
+        padding-top: 0%;
+        padding-right: 0px;
+    }
+
+    .nosotros3 {
+        height: 250px;
+        width: 384px;
+        padding-top: 20%;
+        padding-right: 0px;
+        padding-left: 0%;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .nosotros5 {
+        height: 250px;
+        width: 384px;
+        padding-top: 20%;
+        padding-right: 0px;
+        padding-left: 0%;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .nosotros6 {
+        height: 250px;
+        width: 384px;
+        padding-top: 0%;
+        padding-right: 0px;
+    }
+
+    .promesa {
+        padding-top: 50px;
+        height: 150px;
+        font-size: 11px;
+
+    }
+
+    .footer {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* VISTA TABLET SERVICIOS*/
+
+    .servicios__titulo {
+        height: 260px;
+        font-size: 40px;
+    }
+
+    .servicios {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "redes-img redes"
+            "diseño-img diseño"
+            "desarrollo-img desarrollo"
+    }
+
+
+
+    .contenedor4 {
+        text-align: left;
+        margin-top: 90px;
+    }
+
+    .contenedor4 p {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .contenedor5 {
+        text-align: left;
+        margin-top: 90px;
+    }
+
+    .contenedor5 p {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .contenedor6 {
+        text-align: left;
+        margin-top: 90px;
+    }
+
+    .contenedor6 p {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .contenedor3 {
+        margin-bottom: 50px;
+    }
+
+
+    /*VISTA TABLET PLANES*/
+
+    .planes__titulo {
+        height: 260px;
+        font-size: 50PX;
+    }
+
+    .planes__contenedor {
+        height: 550px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "basico estandar"
+            "avanzado premium"
+
+    }
+
+    .planes__contenedor div {
+        height: 200px;
+        width: auto;
+    }
+
+    .basico {
+        grid-area: basico;
+
+    }
+
+    .estandar {
+        grid-area: estandar;
+    }
+
+    .avanzado {
+        grid-area: avanzado;
+    }
+
+    .premium {
+        grid-area: premium;
+    }
+
+    /* VISTA TABLET CLIENTES */
+
+    .clientes__titulo {
+        height: 260px;
+        font-size: 50PX;
+    }
+
+    .clientes__contenedor {
+        height: 1000px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "cliente1 cliente2"
+            "cliente3 cliente4"
+            "cliente5 cliente6"
+            "cliente7 cliente8"
+    }
+
+
+
+    /* VISTA TABLET CONTACTO */
+
+    .mapa {
+        height: 200px;
+    }
+
+    .contacto__titulo {
+        margin-top: 20px;
+        height: 100px;
+        font-size: 20px;
+    }
+
+
+    .contacto {
+        padding-bottom: 20px;
+    }
+
+}
+
+/* VISTA MOBILE 480PX*/
+
+@media screen and (max-width:480px) {
+
+    /* VISTA MOBILE INDEX*/
+
+    .contenedor {
+        grid-template-columns: (1fr);
+        grid-template-rows: (1fr, 1fr, 3fr, 1fr);
+        grid-template-areas:
+            "header"
+            "slide"
+            "nosotros"
+            "footer"
+    }
+
+    .header {
+        height: 200px;
+    }
+
+    .header__nav a {
+        display: flex;
+        flex-direction: column;
+        margin-left: 8px;
+        margin-right: 8px;
+        justify-content: center;
+    }
+
+    .slide {
+        height: 260px;
+        font-size: 50px;
+    }
+
+    .nosotros {
+        grid-template-columns: (1fr);
+        grid-template-rows: (1fr, 1fr, 1fr, 0.5fr);
+        grid-template-areas:
+            "nosotros1"
+            "nosotros2"
+            "nosotros3"
+            "nosotros4"
+            "nosotros5"
+            "nosotros6"
+            "promesa";
+    }
+
+    .nosotros1 {
+        width: 480px;
+        height: 150px;
+        padding: 30px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .nosotros2 {
+        height: 240px;
+        width: 480px;
+        padding-top: 0%;
+        padding-right: 0px;
+    }
+
+    .nosotros4 {
+        width: 480px;
+        height: 250px;
+        padding: 30px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .nosotros3 {
+        width: 480px;
+        height: 150px;
+        padding: 30px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .nosotros5 {
+        width: 480px;
+        height: 150px;
+        padding: 30px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .nosotros6 {
+        width: 480px;
+        height: 250px;
+        padding: 30px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .promesa {
+        padding-top: 50px;
+        height: 150px;
+        font-size: 11px;
+
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+    /*VISTA MOBILE SERVICIOS*/
+
+    .servicios__titulo {
+        font-size: 25px;
+    }
+
+    .servicios {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor1 {
+        order: 1;
+    }
+
+    .contenedor2 {
+        order: 3;
+    }
+
+    .contenedor3 {
+        order: 5;
+    }
+
+    .contenedor4 {
+        order: 2;
+        width: 480px;
+        height: 50px;
+        text-align: center;
+        margin-top: 1px;
+    }
+
+    .contenedor4 p {
+        text-align: center;
+        margin-top: 10px;
+
+    }
+
+    .contenedor5 {
+        order: 4;
+        width: 480px;
+        height: 50px;
+
+        text-align: center;
+        margin-top: 1px;
+    }
+
+    .contenedor5 p {
+        text-align: center;
+        margin-top: 10px;
+
+    }
+
+    .contenedor6 {
+        order: 6;
+        width: 480px;
+        height: 50px;
+        text-align: center;
+        margin-top: 1px;
+        margin-bottom: 30px;
+    }
+
+    .contenedor6 p {
+        text-align: center;
+        margin-top: 10px;
+
+    }
+
+    .contenedor3 {
+        margin-bottom: 50px;
+    }
+
+
+
+    /* VISTA MOBILE PLANES */
+
+    .planes__titulo {
+        font-size: 25px;
+    }
+
+    .planes__contenedor {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        height: 1100px;
+    }
+
+    .banner__llamada {
+        height: 200px;
+        flex-direction: column;
+    }
+
+    .boton {
+        margin-top: 30px;
+    }
+
+    /* VISTA MOBILE CLIENTES */
+
+    .clientes__titulo {
+        font-size: 25px;
+    }
+
+    .clientes__contenedor {
+        height: 1800px;
+        width: 480px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas:
+            "cliente1"
+            "cliente2"
+            "cliente3"
+            "cliente4"
+            "cliente5"
+            "cliente6"
+            "cliente7"
+            "cliente8"
+
+    }
+
+    /* VISTA MOBILE CONTACTO */
+
+    .mapa {
+        height: 500px;
+    }
+
+    .contacto__titulo {
+        margin-top: 30px;
+        height: 100px;
+        font-size: 20px;
+    }
+
+
+    .contacto {
+        padding-bottom: 20px;
+        padding-left: 40px;
+    }
+
+
+
+
+
+}
