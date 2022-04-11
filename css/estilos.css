@@ -50,7 +50,7 @@ body {
 .slide {
     grid-area: slide;
     height: 500px;
-    background-image: url(../Imagenes/agencia-home.jpg);
+    background-image: url(../imagenes/agencia-home.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
