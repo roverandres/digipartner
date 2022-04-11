@@ -113,7 +113,7 @@ body {
     grid-area: nosotros4;
     height: 350px;
     width: 100%;
-    background-image: url(../Imagenes/n2.jpg);
+    background-image: url(../imagenes/n2.jpg);
     background-position: center;
     background-size: cover;
 
@@ -131,7 +131,7 @@ body {
     grid-area: nosotros6;
     height: 350px;
     width: 100%;
-    background-image: url(../Imagenes/n3.jpg);
+    background-image: url(../imagenes/n3.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -190,7 +190,7 @@ body {
     grid-area: redes-img;
     justify-items: center;
     height: 200px;
-    background-image: url(../Imagenes/redes-sociales.png);
+    background-image: url(../imagenes/redes-sociales.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -202,7 +202,7 @@ body {
 .contenedor2 {
     grid-area: diseño-img;
     height: 200px;
-    background-image: url(../Imagenes/diseño-gráfico.png);
+    background-image: url(../imagenes/diseño-grafico.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -213,7 +213,7 @@ body {
 .contenedor3 {
     grid-area: desarrollo-img;
     height: 200px;
-    background-image: url(../Imagenes/desarrollo-web.png);
+    background-image: url(../imagenes/desarrollo-web.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
