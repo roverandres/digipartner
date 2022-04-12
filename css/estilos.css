@@ -206,8 +206,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1fr, 0.6fr);
     grid-template-areas:
-        "redes-img diseño-img desarrollo-img"
-        "redes diseño desarrollo"
+        "redes-img diseno-img desarrollo-img"
+        "redes diseno desarrollo"
 }
 
 .contenedor1 {
@@ -224,9 +224,9 @@ body {
 }
 
 .contenedor2 {
-    grid-area: diseño-img;
+    grid-area: diseno-img;
     height: 200px;
-    background-image: url(../imagenes/diseño-grafico.png);
+    background-image: url(../imagenes/diseno-grafico.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -257,7 +257,7 @@ body {
 }
 
 .contenedor5 {
-    grid-area: diseño;
+    grid-area: diseno;
     height: 150px;
     text-align: center;
     margin-top: 20px;
