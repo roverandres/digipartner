@@ -226,11 +226,7 @@ body {
 .contenedor2 {
     grid-area: diseno-img;
     height: 200px;
-<<<<<<< HEAD
-    background-image: url(../imagenes/diseño-grafico.png);
-=======
     background-image: url(../imagenes/diseno-grafico.png);
->>>>>>> animaciones
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
