@@ -63,7 +63,7 @@ body {
 
 .nosotros {
     grid-area: nosotros;
-    background-color: white;
+    background: linear-gradient(0deg, rgba(91,91,91,1) 0%, rgba(255,255,255,1) 59%);
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -79,13 +79,16 @@ body {
 .nosotros1 {
     grid-area: nosotros1;
     height: 250px;
-    background-color: white;
     background-size: contain;
     text-align: right;
     color: black;
-    padding-top: 40%;
     padding-right: 40px;
+    padding-top: 40%;
 
+}
+
+.redes__titulo {
+    transform: rotate(358deg);
 }
 
 .nosotros2 {
@@ -95,18 +98,28 @@ body {
     background-image: url(../imagenes/n1.jpg);
     background-position: center;
     background-size: cover;
+    transition: all 1s;
 
+
+}
+
+.nosotros2:hover {
+    filter: grayscale(100%);
 }
 
 .nosotros3 {
     grid-area: nosotros3;
     height: 250px;
-    background-color: white;
     background-size: contain;
     text-align: left;
     color: black;
-    padding-top: 40%;
     padding-left: 40px;
+    padding-top: 40%;
+
+}
+
+.creaciones__titulo {
+    transform: rotate(1deg);
 }
 
 .nosotros4 {
@@ -116,7 +129,13 @@ body {
     background-image: url(../imagenes/n2.jpg);
     background-position: center;
     background-size: cover;
+    transition: all 1s;
 
+
+}
+
+.nosotros4:hover {
+    filter: grayscale(100%);
 }
 
 .nosotros5 {
@@ -134,14 +153,19 @@ body {
     background-image: url(../imagenes/n3.jpg);
     background-position: center;
     background-size: cover;
+    transition: all 1s;
+}
+
+.nosotros6:hover {
+    filter: grayscale(100%);
 }
 
 .promesa {
+    background-color: #464646;
     grid-area: promesa;
     width: 100%;
     height: 200px;
     display: inline-block;
-    background-color: black;
     text-align: center;
     color: white;
     padding-top: 4%;
@@ -151,7 +175,7 @@ body {
 
 .footer {
     grid-area: footer;
-    background-color: #909090;
+    background-color: #2a2a2a;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -182,8 +206,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1fr, 0.6fr);
     grid-template-areas:
-        "redes-img diseño-img desarrollo-img"
-        "redes diseño desarrollo"
+        "redes-img diseno-img desarrollo-img"
+        "redes diseno desarrollo"
 }
 
 .contenedor1 {
@@ -200,9 +224,13 @@ body {
 }
 
 .contenedor2 {
-    grid-area: diseño-img;
+    grid-area: diseno-img;
     height: 200px;
+<<<<<<< HEAD
     background-image: url(../imagenes/diseño-grafico.png);
+=======
+    background-image: url(../imagenes/diseno-grafico.png);
+>>>>>>> animaciones
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -233,7 +261,7 @@ body {
 }
 
 .contenedor5 {
-    grid-area: diseño;
+    grid-area: diseno;
     height: 150px;
     text-align: center;
     margin-top: 20px;
@@ -270,8 +298,7 @@ body {
 }
 
 .planes__main {
-    background-color: #5b5b5b;
-
+    background: linear-gradient(0deg, rgba(91,91,91,1) 0%, rgba(125,125,125,1) 59%);
 
 }
 
@@ -458,7 +485,7 @@ body {
 
 /* VISTA TABLET 768PX */
 
-@media screen and (max-width:768px) {
+@media screen and (min-width:481px) and (max-width:768px)  {
 
     /* VISTA TABLET INDEX*/
 
