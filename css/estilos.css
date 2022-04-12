@@ -50,7 +50,7 @@ body {
 .slide {
     grid-area: slide;
     height: 500px;
-    background-image: url(../Imagenes/agencia-home.jpg);
+    background-image: url(../imagenes/agencia-home.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -63,7 +63,7 @@ body {
 
 .nosotros {
     grid-area: nosotros;
-    background-color: white;
+    background: linear-gradient(0deg, rgba(91,91,91,1) 0%, rgba(255,255,255,1) 59%);
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -79,13 +79,16 @@ body {
 .nosotros1 {
     grid-area: nosotros1;
     height: 250px;
-    background-color: white;
     background-size: contain;
     text-align: right;
     color: black;
-    padding-top: 40%;
     padding-right: 40px;
+    padding-top: 40%;
 
+}
+
+.redes__titulo {
+    transform: rotate(358deg);
 }
 
 .nosotros2 {
@@ -95,28 +98,44 @@ body {
     background-image: url(../imagenes/n1.jpg);
     background-position: center;
     background-size: cover;
+    transition: all 1s;
 
+
+}
+
+.nosotros2:hover {
+    filter: grayscale(100%);
 }
 
 .nosotros3 {
     grid-area: nosotros3;
     height: 250px;
-    background-color: white;
     background-size: contain;
     text-align: left;
     color: black;
-    padding-top: 40%;
     padding-left: 40px;
+    padding-top: 40%;
+
+}
+
+.creaciones__titulo {
+    transform: rotate(1deg);
 }
 
 .nosotros4 {
     grid-area: nosotros4;
     height: 350px;
     width: 100%;
-    background-image: url(../Imagenes/n2.jpg);
+    background-image: url(../imagenes/n2.jpg);
     background-position: center;
     background-size: cover;
+    transition: all 1s;
 
+
+}
+
+.nosotros4:hover {
+    filter: grayscale(100%);
 }
 
 .nosotros5 {
@@ -131,17 +150,22 @@ body {
     grid-area: nosotros6;
     height: 350px;
     width: 100%;
-    background-image: url(../Imagenes/n3.jpg);
+    background-image: url(../imagenes/n3.jpg);
     background-position: center;
     background-size: cover;
+    transition: all 1s;
+}
+
+.nosotros6:hover {
+    filter: grayscale(100%);
 }
 
 .promesa {
+    background-color: #464646;
     grid-area: promesa;
     width: 100%;
     height: 200px;
     display: inline-block;
-    background-color: black;
     text-align: center;
     color: white;
     padding-top: 4%;
@@ -151,7 +175,7 @@ body {
 
 .footer {
     grid-area: footer;
-    background-color: #909090;
+    background-color: #2a2a2a;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -190,7 +214,7 @@ body {
     grid-area: redes-img;
     justify-items: center;
     height: 200px;
-    background-image: url(../Imagenes/redes-sociales.png);
+    background-image: url(../imagenes/redes-sociales.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -202,7 +226,7 @@ body {
 .contenedor2 {
     grid-area: diseño-img;
     height: 200px;
-    background-image: url(../Imagenes/diseño-gráfico.png);
+    background-image: url(../imagenes/diseño-grafico.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -213,7 +237,7 @@ body {
 .contenedor3 {
     grid-area: desarrollo-img;
     height: 200px;
-    background-image: url(../Imagenes/desarrollo-web.png);
+    background-image: url(../imagenes/desarrollo-web.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -270,8 +294,7 @@ body {
 }
 
 .planes__main {
-    background-color: #5b5b5b;
-
+    background: linear-gradient(0deg, rgba(91,91,91,1) 0%, rgba(125,125,125,1) 59%);
 
 }
 
@@ -458,7 +481,7 @@ body {
 
 /* VISTA TABLET 768PX */
 
-@media screen and (max-width:768px) {
+@media screen and (min-width:481px) and (max-width:768px)  {
 
     /* VISTA TABLET INDEX*/
 
