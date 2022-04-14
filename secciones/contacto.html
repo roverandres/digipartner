@@ -24,8 +24,9 @@
 
 <body>
     <div class="container-fluid">
+        
         <header class="row">
-            <nav class="col-lg-12 header__nav">
+            <nav class="col-12 header__nav">
 
 
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -62,35 +63,63 @@
             </nav>
         </header>
 
-    <iframe class="row mapa"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.3595830940158!2d-72.00921838477592!3d-34.3922051805148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9661577db1974a0b%3A0xe393573c46b08dd8!2sAv.%20Sta.%20Mar%C3%ADa%20612%2C%20Pichilemu%2C%20O&#39;Higgins!5e0!3m2!1ses-419!2scl!4v1638234160956!5m2!1ses-419!2scl"
-        width="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="row">
+            <iframe class="col-12 mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.3595830940158!2d-72.00921838477592!3d-34.3922051805148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9661577db1974a0b%3A0xe393573c46b08dd8!2sAv.%20Sta.%20Mar%C3%ADa%20612%2C%20Pichilemu%2C%20O&#39;Higgins!5e0!3m2!1ses-419!2scl!4v1638234160956!5m2!1ses-419!2scl"
+                width="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
 
-    <div class="contacto__titulo">
-        <h1 class="animate__animated animate__pulse animate__slow animate__repeat-3">¡No seas tímid@,dí hola!</h1>
+        <div class="row">
+            <div class="col-12 contacto__titulo">
+                <h1 class="animate__animated animate__pulse animate__slow animate__repeat-3">¡No seas tímid@,dí hola!
+                </h1>
+            </div>
+        </div>
+
+
+
+        <section class="row contacto">
+
+            <form class="col-8">
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Nombre</label>
+                    <input type="name" class="form-control" id="inputname">
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefonolInput1" class="form-label">Teléfono</label>
+                    <input type="telefono" class="form-control" id="telefonoInput1" placeholder="+56 9 000011223">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Confirma tus datos.</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+
+        </section>
+
+        <footer class="row footer">
+            <a class="col-7 footer__direccion" href="https://goo.gl/maps/gadWMsNSupQrs3s2A" target="_blank">Avenida
+                Santa Maria #612,
+                Pichilemu, chile.</a>
+            <a class="col-5 footer__telefono" href="tel:+56966613144" target="_blank">Llámanos (+56) 9 66613144 </a>
+            <p class="col-12"> Copyright © 2021 Digipartner - Agencia Digital.</p>
+        </footer>
     </div>
-
-
-
-    <section class="contacto">
-        <form class="formulario" action="" method="post" enctype="application/x-www-form-urlencoded">
-            <label for="Casilla1">Nombre&nbsp; &nbsp;</label><input type="text" required><br>
-            <label for="casilla5">Empresa&nbsp; </label><input type="text" required><br>
-            <label for="casilla4">Telefono&nbsp; </label><input type="text" placeholder="+56 9" required><br>
-            <label for="casilla5">Correo&nbsp; &nbsp; &nbsp;</label><input type="email" required><br>
-            <textarea name="area de texto" id="" cols="30" rows="5" placeholder="Tu mensaje acá"></textarea><br>
-            <input type="submit" value="Enviar">
-            <input type="reset" name="Reestablecer"><br>
-        </form>
-
-    </section>
-    <footer class="row footer">
-        <a class="col-7 footer__direccion" href="https://goo.gl/maps/gadWMsNSupQrs3s2A" target="_blank">Avenida Santa Maria #612,
-            Pichilemu, chile.</a>
-        <a class="col-5 footer__telefono" href="tel:+56966613144" target="_blank">Llámanos (+56) 9 66613144 </a>
-        <p class="col-12"> Copyright © 2021 Digipartner - Agencia Digital.</p>
-    </footer>
-</div>
     <script src="../js/bootstrap.min.js"></script>
 
 </body>
