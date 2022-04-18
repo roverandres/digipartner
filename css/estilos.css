@@ -131,7 +131,6 @@ body {
     background-size: cover;
     transition: all 1s;
 
-
 }
 
 .nosotros4:hover {
@@ -366,11 +365,12 @@ body {
 }
 
 .clientes__main {
-    background-color: #5b5b5b;
+    background-color:rgba(91, 91, 91, 1);
+
 }
 
 .clientes__contenedor {
-    background-color: #5b5b5b;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 16%, rgba(203,203,203,1) 92%);
     height: 500px;
     width: 100%;
     display: grid;
@@ -384,45 +384,84 @@ body {
 .clientes__contenedor div {
     width: 150px;
     height: 150px;
-    background-color: mediumpurple;
     align-self: center;
     justify-self: center;
-
+    font-size: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    vertical-align: center;
+    color: white;
 
 }
 
 .cliente1 {
     grid-area: cliente1;
+    background-image: url(../imagenes/casamolle-logo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s;
+
+
+}
+
+.cliente1:hover {
+    filter: grayscale(100%);
 }
 
 .cliente2 {
     grid-area: cliente2;
+    background-color: #5b5b5b;
 }
 
 .cliente3 {
     grid-area: cliente3;
+    background-color: #5b5b5b;
+
 }
 
 .cliente4 {
     grid-area: cliente4;
+    background-color: #5b5b5b;
+
 }
 
 .cliente5 {
     grid-area: cliente5;
+    background-color: #5b5b5b;
+
 }
 
 .cliente6 {
     grid-area: cliente6;
+    background-color: #5b5b5b;
+
 }
 
 .cliente7 {
     grid-area: cliente7;
+    background-color: #5b5b5b;
+
 }
 
 .cliente8 {
     grid-area: cliente8;
+        background-color: #5b5b5b;
+
 }
 
+.boton {
+
+    background:#2a2a2a;
+
+}
+
+.boton a {
+
+color: white;
+}
 
 /* CONTACTO ESCRITORIO */
 
@@ -441,11 +480,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
+
 
 
 .mapa {
     height: 400px;
+}
+
+.btn {
+
+    background-color:#464646;
+    border-color: #2a2a2a;
 }
 
 
