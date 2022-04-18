@@ -40,7 +40,7 @@ body {
 
 }
 
-.index__main{
+.index__main {
 
     border: none;
 
@@ -67,6 +67,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 400px;
+    width: 100%;
+    background-image: url(../imagenes/n4.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
 
 
 }
@@ -101,6 +108,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 400px;
+    width: 100%;
+    background-image: url(../imagenes/n5.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
 
 }
 
@@ -132,6 +146,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 400px;
+    width: 100%;
+    background-image: url(../imagenes/n6.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
 
 }
 
@@ -188,6 +210,8 @@ body {
     text-align: left;
 }
 
+/* SERVICOS ESCRITORIO */
+
 .slide__servicios {
     height: 500px;
     background-image: url(../imagenes/slide-servicios.png);
@@ -199,7 +223,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .servicios__titulo {
@@ -210,79 +234,12 @@ body {
     font-family: 'Roboto', sans-serif;
 
 }
-.card {
+
+.carta {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-}
-
-/* .servicios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1fr, 0.6fr);
-    grid-template-areas:
-        "redes-img diseno-img desarrollo-img"
-        "redes diseno desarrollo"
-} */
-
-.contenedor1 {
-    justify-items: center;
-    height: 200px;
-    background-image: url(../imagenes/redes-sociales.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 50px;
-
-
-}
-
-.contenedor2 {
-    height: 200px;
-    background-image: url(../imagenes/diseno-grafico.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 50px;
-
-}
-
-.contenedor3 {
-    height: 200px;
-    background-image: url(../imagenes/desarrollo-web.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 50px;
-
-}
-
-.contenedor4 {
-    height: 150px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.contenedor4 p {
-    margin: 20px;
-}
-
-.contenedor5 {
-    height: 150px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.contenedor5 p {
-    margin: 20px;
-}
-
-.contenedor6 {
-    height: 150px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.contenedor6 p {
-    margin: 20px;
+    align-items: flex-start;
 }
 
 /* PLANES ESCRITORIO */
@@ -298,7 +255,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .planes__titulo {
@@ -396,7 +353,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .clientes__titulo {
@@ -469,11 +426,11 @@ body {
 
 /* CONTACTO ESCRITORIO */
 
-.contacto{
-display: flex;
-align-items: center;
-justify-content: center;
-padding-bottom: 30px;
+.contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
 }
 
 .contacto__titulo {
@@ -498,7 +455,7 @@ padding-bottom: 30px;
 
 /* VISTA TABLET 768PX */
 
-@media screen and (min-width:481px) and (max-width:768px) {
+@media screen and (max-width:992px) and (min-width:481px) {
 
     /* VISTA TABLET INDEX*/
 
@@ -529,33 +486,39 @@ padding-bottom: 30px;
     .nosotros1 {
         text-align: center;
         font-size: 15px;
+        height: 270px;
+        width: 100%;
+
     }
 
     .nosotros2 {
-        height: 300px;
-        height: auto;
+        height: 270px;
         width: 100%;
     }
 
     .nosotros4 {
-        height: 300px;
-        height: auto;
+        height: 270px;
         width: 100%;
     }
 
     .nosotros3 {
         text-align: center;
         font-size: 15px;
+        height: 270px;
+        width: 100%;
+
     }
 
     .nosotros5 {
-        height: 300px;
         text-align: center;
         font-size: 15px;
+        height: 270px;
+        width: 100%;
+
     }
 
     .nosotros6 {
-        height: auto;
+        height: 270px;
         width: 100%;
     }
 
@@ -572,9 +535,15 @@ padding-bottom: 30px;
 
     /* VISTA TABLET SERVICIOS*/
 
+    .servicios {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
 
     .slide__servicios {
-        height: 300px;
+        height: 350px;
         font-size: 50px;
     }
 
@@ -590,7 +559,7 @@ padding-bottom: 30px;
 
 
     .slide__planes {
-        height: 300px;
+        height: 350px;
         font-size: 50px;
     }
 
@@ -638,9 +607,16 @@ padding-bottom: 30px;
 
     /* VISTA TABLET CLIENTES */
 
+    .slide__clientes {
+        height: 350px;
+        font-size: 50px;
+    }
+
     .clientes__titulo {
-        height: 260px;
-        font-size: 50PX;
+        font-size: 90px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
     }
 
     .clientes__contenedor {
@@ -659,7 +635,7 @@ padding-bottom: 30px;
     /* VISTA TABLET CONTACTO */
 
     .mapa {
-        height: 200px;
+        height: 350px;
     }
 
     .contacto__titulo {
@@ -697,7 +673,7 @@ padding-bottom: 30px;
         font-weight: bold;
         font-family: 'Roboto', sans-serif;
     }
-    
+
 
     .nosotros {
         grid-template-columns: 1fr;
@@ -714,31 +690,40 @@ padding-bottom: 30px;
     .nosotros1 {
         text-align: center;
         font-size: 15px;
+        height: 230px;
+        width: 100%;
+
     }
 
     .nosotros2 {
-        height: 250px;
+        height: 230px;
         width: 100%;
     }
 
     .nosotros3 {
         text-align: center;
         font-size: 15px;
+        height: 230px;
+        width: 100%;
+
     }
 
 
     .nosotros4 {
-        height: 250px;
+        height: 230px;
         width: 100%;
     }
 
     .nosotros5 {
         text-align: center;
         font-size: 15px;
+        height: 230px;
+        width: 100%;
+
     }
 
     .nosotros6 {
-        height: 250px;
+        height: 230px;
         width: 100%;
     }
 
@@ -754,6 +739,11 @@ padding-bottom: 30px;
     }
 
     /*VISTA MOBILE SERVICIOS*/
+
+.carta {
+
+    padding-top: 20px;
+}
 
     .slide__servicios {
         height: 300px;
@@ -771,7 +761,7 @@ padding-bottom: 30px;
 
     /* VISTA MOBILE PLANES */
 
-    .slide__splanes {
+    .slide__planes {
         height: 300px;
         font-size: 50px;
     }
@@ -794,12 +784,12 @@ padding-bottom: 30px;
         height: 1100px;
     }
 
-    .planes__contenedor div{
+    .planes__contenedor div {
         justify-content: center;
         height: 200px;
         width: auto;
 
-        }
+    }
 
 
     .banner__llamada {
@@ -813,8 +803,17 @@ padding-bottom: 30px;
 
     /* VISTA MOBILE CLIENTES */
 
+    .slide__clientes {
+        height: 300px;
+        font-size: 50px;
+    }
+
     .clientes__titulo {
-        font-size: 25px;
+
+        font-size: 50px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
     }
 
     .clientes__contenedor {
@@ -837,7 +836,7 @@ padding-bottom: 30px;
     /* VISTA MOBILE CONTACTO */
 
     .mapa {
-        height: 500px;
+        height: 400px;
     }
 
     .contacto__titulo {
