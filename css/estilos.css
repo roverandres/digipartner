@@ -365,12 +365,12 @@ body {
 }
 
 .clientes__main {
-    background-color:rgba(91, 91, 91, 1);
+    background-color: rgba(91, 91, 91, 1);
 
 }
 
 .clientes__contenedor {
-    background: linear-gradient(0deg, rgba(255,255,255,1) 16%, rgba(203,203,203,1) 92%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 16%, rgba(203, 203, 203, 1) 92%);
     height: 500px;
     width: 100%;
     display: grid;
@@ -382,6 +382,21 @@ body {
 }
 
 .clientes__contenedor div {
+    width: 150px;
+    height: 150px;
+    align-self: center;
+    justify-self: center;
+    font-size: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    vertical-align: center;
+    color: white;
+
+}
+
+.clientes__contenedor a {
     width: 150px;
     height: 150px;
     align-self: center;
@@ -448,19 +463,24 @@ body {
 
 .cliente8 {
     grid-area: cliente8;
-        background-color: #5b5b5b;
+    background-color: #5b5b5b;
 
 }
 
 .boton {
 
-    background:#2a2a2a;
+    background: #2a2a2a;
+
+}
+
+.boton:hover {
+    background: #464646;
 
 }
 
 .boton a {
 
-color: white;
+    color: white;
 }
 
 /* CONTACTO ESCRITORIO */
@@ -492,10 +512,16 @@ color: white;
 
 .btn {
 
-    background-color:#464646;
+    background-color: #464646;
     border-color: #2a2a2a;
 }
 
+.btn:hover {
+    background: rgba(125, 125, 125, 1);
+    border-color: #2a2a2a;
+
+
+}
 
 
 
@@ -788,10 +814,10 @@ color: white;
 
     /*VISTA MOBILE SERVICIOS*/
 
-.carta {
+    .carta {
 
-    padding-top: 20px;
-}
+        padding-top: 20px;
+    }
 
     .slide__servicios {
         height: 300px;
