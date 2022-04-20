@@ -1,0 +1,222 @@
+@import "mediaqueries";
+@import "variables";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid {
+    font-family: 'Roboto', sans-serif;
+}
+
+.digipartner__logo {
+    margin-top: 20px;
+}
+
+.slide {
+    height: 500px;
+    background-image: url(../imagenes/agencia-home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: 70px;
+    color: $colortitulo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.index__titulo {
+
+    font-size: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+
+
+
+}
+
+.index__main {
+
+    border: none;
+
+}
+
+.nosotros {
+    background: linear-gradient(0deg, rgba(91, 91, 91, 1) 0%, rgba(255, 255, 255, 1) 59%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "nosotros1 nosotros2 nosotros3"
+        "nosotros4 nosotros5 nosotros6";
+    justify-items: center;
+    background-color: white
+}
+
+.nosotros1 {
+    grid-area: nosotros1;
+    text-align: right;
+    color: black;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+    background-image: url(../imagenes/n4.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h1 {
+        transform: rotate(358deg);
+    }
+
+
+}
+
+
+.nosotros2 {
+    grid-area: nosotros2;
+    height: 400px;
+    width: 100%;
+    background-image: url(../imagenes/n1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s;
+
+    &:hover {
+        filter: grayscale(100%);
+    }
+
+
+}
+
+
+.nosotros3 {
+    grid-area: nosotros3;
+    text-align: left;
+    color: black;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+    background-image: url(../imagenes/n5.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h2{
+        transform: rotate(1deg);
+    }
+
+}
+
+
+.nosotros4 {
+    grid-area: nosotros4;
+    height: 400px;
+    width: 100%;
+    background-image: url(../imagenes/n2.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all 1s;
+
+    &:hover {
+        filter: grayscale(100%);
+    }
+
+}
+
+
+.nosotros5 {
+    grid-area: nosotros5;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+    background-image: url(../imagenes/n6.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+
+}
+
+.nosotros6 {
+    grid-area: nosotros6;
+    height: 400px;
+    width: 100%;
+    background-image: url(../imagenes/n3.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all 1s;
+
+    &:hover {
+        filter: grayscale(100%);
+    }
+}
+
+
+.promesa {
+    background-color: #464646;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    color: $colortitulo;
+    padding-left: 17%;
+    padding-right: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer {
+    background-color: #2a2a2a;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+    color: $colortitulo;
+    display: flex;
+    justify-content: center;
+
+    a {
+        color: $colortitulo;
+    }
+
+}
+
+
+.footer__direccion {
+
+    text-align: right;
+}
+
+.footer__telefono {
+
+    text-align: left;
+}
+
+
