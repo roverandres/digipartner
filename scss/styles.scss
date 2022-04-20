@@ -32,18 +32,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.index__titulo {
+    h1 {
 
-    font-size: 150px;
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-
-
+        font-size: 150px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+    }
 
 }
+
 
 .index__main {
 
