@@ -1,13 +1,10 @@
-@import "mediaqueries";
 @import "variables";
-
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -32,17 +29,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    h1 {
-
-        font-size: 150px;
-        text-align: center;
-        font-weight: bold;
-        font-family: 'Roboto', sans-serif;
-    }
-
 }
 
+.index__titulo {
+
+    font-size: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+
+
+
+}
 
 .index__main {
 
@@ -78,13 +76,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
-    h1 {
-        transform: rotate(358deg);
-    }
 
 
 }
 
+.redes__titulo {
+    transform: rotate(358deg);
+}
 
 .nosotros2 {
     grid-area: nosotros2;
@@ -99,9 +97,8 @@ body {
     &:hover {
         filter: grayscale(100%);
     }
-
-
 }
+
 
 
 .nosotros3 {
@@ -120,12 +117,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
-    h2{
-        transform: rotate(1deg);
-    }
 
 }
 
+.creaciones__titulo {
+    transform: rotate(1deg);
+}
 
 .nosotros4 {
     grid-area: nosotros4;
@@ -139,9 +136,7 @@ body {
     &:hover {
         filter: grayscale(100%);
     }
-
 }
-
 
 .nosotros5 {
     grid-area: nosotros5;
@@ -176,7 +171,6 @@ body {
     }
 }
 
-
 .promesa {
     background-color: #464646;
     width: 100%;
@@ -197,16 +191,14 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     text-decoration: none;
-    color: $colortitulo;
+    color: white;
     display: flex;
     justify-content: center;
 
     a {
-        color: $colortitulo;
+        color: white;
     }
-
 }
-
 
 .footer__direccion {
 
@@ -218,4 +210,175 @@ body {
     text-align: left;
 }
 
+/* VISTA TABLET 768PX */
 
+@media screen and (max-width:992px) and (min-width:481px) {
+
+    /* VISTA TABLET INDEX*/
+
+    .digipartner__logo {
+        width: 60px;
+    }
+
+    .header__nav {
+        a {
+            margin-left: 8px;
+        margin-right: 8px;
+        justify-content: center;
+        }
+    }
+
+    .slide {
+        height: 350px;
+        font-size: 50px;
+    }
+
+    .nosotros {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "nosotros1 nosotros2"
+            "nosotros4 nosotros3"
+            "nosotros5 nosotros6";
+    }
+
+    .nosotros1 {
+        text-align: center;
+        font-size: 15px;
+        height: 270px;
+        width: 100%;
+
+    }
+
+    .nosotros2 {
+        height: 270px;
+        width: 100%;
+    }
+
+    .nosotros4 {
+        height: 270px;
+        width: 100%;
+    }
+
+    .nosotros3 {
+        text-align: center;
+        font-size: 15px;
+        height: 270px;
+        width: 100%;
+
+    }
+
+    .nosotros5 {
+        text-align: center;
+        font-size: 15px;
+        height: 270px;
+        width: 100%;
+
+    }
+
+    .nosotros6 {
+        height: 270px;
+        width: 100%;
+    }
+
+    .promesa {
+        font-size: 11px;
+        height: 160px;
+
+    }
+
+    .footer {
+        font-size: 14px;
+        text-align: center;
+    }
+
+}
+
+/* VISTA MOBILE 480PX*/
+
+@media screen and (max-width:480px) {
+
+    /* VISTA MOBILE INDEX*/
+
+    .header {
+        height: 200px;
+    }
+
+    .slide {
+        height: 300px;
+        font-size: 50px;
+    }
+
+    .index__titulo {
+
+        font-size: 70px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+    }
+
+
+    .nosotros {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+            "nosotros1"
+            "nosotros2"
+            "nosotros3"
+            "nosotros4"
+            "nosotros5"
+            "nosotros6"
+    }
+
+    .nosotros1 {
+        text-align: center;
+        font-size: 15px;
+        height: 230px;
+        width: 100%;
+
+    }
+
+    .nosotros2 {
+        height: 230px;
+        width: 100%;
+    }
+
+    .nosotros3 {
+        text-align: center;
+        font-size: 15px;
+        height: 230px;
+        width: 100%;
+
+    }
+
+
+    .nosotros4 {
+        height: 230px;
+        width: 100%;
+    }
+
+    .nosotros5 {
+        text-align: center;
+        font-size: 15px;
+        height: 230px;
+        width: 100%;
+
+    }
+
+    .nosotros6 {
+        height: 230px;
+        width: 100%;
+    }
+
+    .promesa {
+        padding-top: 10px;
+        height: 200px;
+        font-size: 11px;
+
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+}
