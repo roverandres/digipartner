@@ -7,6 +7,14 @@
     box-sizing: border-box;
 }
 
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+/* INDEX ESCRITORIO */
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -19,46 +27,62 @@ body {
     margin-top: 20px;
 }
 
+
+.header {
+    height: 200px;
+}
+
+
 .slide {
     height: 500px;
+    font-size: 70px;
     background-image: url(../imagenes/agencia-home.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    font-size: 70px;
     color: $colortitulo;
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.index__titulo {
-
-    font-size: 150px;
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-
+    h1 {
+        font-size: 150px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+    }
 
 
 }
+
+
 
 .index__main {
 
     border: none;
-
 }
+
 
 .nosotros {
     background: linear-gradient(0deg, rgba(91, 91, 91, 1) 0%, rgba(255, 255, 255, 1) 59%);
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
         "nosotros1 nosotros2 nosotros3"
         "nosotros4 nosotros5 nosotros6";
     justify-items: center;
-    background-color: white
+    background-color: white;
+
+}
+
+@mixin NosConfig {
+    height: map-get($nosotros__estilos, altura);
+    width: map-get($nosotros__estilos, ancho);
+    background-position: map-get($nosotros__estilos, FondoCentrado);
+    background-size: map-get($nosotros__estilos, TamanoFondo);
+    background-repeat: map-get($nosotros__estilos, NoRepetir);
 }
 
 .nosotros1 {
@@ -70,37 +94,25 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 400px;
-    width: 100%;
     background-image: url(../imagenes/n4.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include NosConfig;
 
-
-
-}
-
-.redes__titulo {
-    transform: rotate(358deg);
-}
-
-.nosotros2 {
-    grid-area: nosotros2;
-    height: 400px;
-    width: 100%;
-    background-image: url(../imagenes/n1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: all 1s;
-
-    &:hover {
-        filter: grayscale(100%);
+    h1 {
+        transform: rotate(358deg);
     }
 }
 
 
+
+.nosotros2 {
+    grid-area: nosotros2;
+    background-image: url(../imagenes/n1.jpg);
+    transition: all 1s;
+    @include NosConfig;
+    &:hover {
+        filter: grayscale(100%);
+    }
+}
 
 .nosotros3 {
     grid-area: nosotros3;
@@ -111,29 +123,19 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 400px;
-    width: 100%;
     background-image: url(../imagenes/n5.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-
+    @include NosConfig;
+    h2 {
+        transform: rotate(1deg);
+    }
 }
 
-.creaciones__titulo {
-    transform: rotate(1deg);
-}
 
 .nosotros4 {
     grid-area: nosotros4;
-    height: 400px;
-    width: 100%;
     background-image: url(../imagenes/n2.jpg);
-    background-position: center;
-    background-size: cover;
     transition: all 1s;
-
+    @include NosConfig;
     &:hover {
         filter: grayscale(100%);
     }
@@ -141,31 +143,21 @@ body {
 
 .nosotros5 {
     grid-area: nosotros5;
-    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 400px;
-    width: 100%;
     background-image: url(../imagenes/n6.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-
-
+    @include NosConfig;
 }
 
 .nosotros6 {
     grid-area: nosotros6;
-    height: 400px;
-    width: 100%;
     background-image: url(../imagenes/n3.jpg);
-    background-position: center;
-    background-size: cover;
     transition: all 1s;
+    @include NosConfig;
+
 
     &:hover {
         filter: grayscale(100%);
@@ -183,7 +175,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .footer {
@@ -192,22 +183,339 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     text-decoration: none;
-    color: white;
+    display: block;
+    justify-content: center;
+
+    li {
+        list-style: none;
+        display: inline-block;
+        padding: 0px 25px;
+        font-size: medium;
+    }
+
+    a {
+        &:hover {
+            color: #c876cb;
+        }
+    }
+}
+
+
+
+.footer__direccion {
+    text-align: right;
+}
+
+.footer__telefono {
+    text-align: left;
+}
+
+/* MAPA */
+
+$redes: (facebook: #ffffff,
+    instagram: #dcdcdc,
+    linkedin: #bdbdbd,
+    direccion: #a7a7a7,
+    telefono:#959595,
+    copyright:#919192,
+);
+
+/* BUCLE MAPA */
+@each $red,
+$color in $redes {
+    .btn--#{$red} {
+        color: $color;
+    }
+
+
+}
+
+
+/* SERVICOS ESCRITORIO */
+
+.slide__servicios {
+    @extend .slide;
+    background-image: url(../imagenes/slide-servicios.png);
+
+}
+
+.servicios__titulo {
+
+    font-size: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.servicios {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.carta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* CLIENTES ESCRITORIO */
+
+.slide__clientes {
+    @extend .slide;
+    background-image: url(../imagenes/slide-clientes.png);
+
+    h1 {
+
+        font-size: 150px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+
+    }
+}
+
+
+
+.clientes__main {
+    background-color: rgba(91, 91, 91, 1);
+
+}
+
+.clientes__contenedor {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 16%, rgba(203, 203, 203, 1) 92%);
+    height: 500px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "cliente1 cliente2 cliente3 cliente4"
+        "cliente5 cliente6 cliente7 cliente8";
+
+    div {
+        width: 150px;
+        height: 150px;
+        align-self: center;
+        justify-self: center;
+        font-size: 100px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        vertical-align: center;
+        color: white;
+    }
+
+
+    a {
+        width: 150px;
+        height: 150px;
+        align-self: center;
+        justify-self: center;
+        font-size: 100px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        vertical-align: center;
+        color: white;
+    }
+
+}
+
+.cliente-1 {
+    grid-area: cliente1;
+    background-image: url(../imagenes/casamolle-logo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s;
+
+    &:hover {
+        filter: grayscale(100%);
+    }
+}
+
+
+
+
+/* BUCLE */
+
+@for $i from 2 through 8 {
+    .cliente-#{$i} {
+        grid-area: cliente#{$i};
+        background-color: #5b5b5b;
+    }
+}
+
+
+.banner__llamada {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+
+}
+
+.planes__frase {
+    color: white;
+    margin-right: 30px;
+}
+
+.boton {
+    background-color: #2a2a2a;
+    height: 60px;
+    border-style: inset;
+    border-color: white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    &:hover {
+        background: #464646;
+    }
 
     a {
         color: white;
     }
 }
 
-.footer__direccion {
 
-    text-align: right;
+/* PLANES ESCRITORIO */
+
+.slide__planes {
+@extend .slide;
+background-image: url(../imagenes/slide-planes.png);
+
 }
 
-.footer__telefono {
+.planes__titulo {
 
-    text-align: left;
+    font-size: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+
 }
 
+.planes__main {
+    background: linear-gradient(0deg, rgba(91, 91, 91, 1) 0%, rgba(125, 125, 125, 1) 59%);
+
+}
+
+.planes__contenedor {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 400px;
+
+}
+
+
+@mixin PlanesBox {
+    width: 200px;
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: $colortitulo;
+    
+}
+
+.basico {
+    @include PlanesBox;
+}
+
+.estandar {
+    @include PlanesBox;
+}
+
+.avanzado {
+    @include PlanesBox;
+}
+
+.premium {
+    @include PlanesBox;
+}
+
+
+
+.banner__llamada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+
+}
+
+.planes__frase {
+    color: white;
+    margin-right: 30px;
+}
+
+.boton {
+    background-color: black;
+    height: 60px;
+    border-style: inset;
+    border-color: white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+/* CONTACTO ESCRITORIO */
+
+.contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.contacto__titulo {
+    margin-top: 20px;
+    height: 100px;
+    font-size: 40px;
+    color: #5b5b5b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+
+
+.mapa {
+    height: 400px;
+}
+
+.btn {
+
+    background-color: #464646;
+    border-color: #2a2a2a;
+    &:hover {
+        background: rgba(125, 125, 125, 1);
+        border-color: #2a2a2a;
+    
+    
+    }
+}

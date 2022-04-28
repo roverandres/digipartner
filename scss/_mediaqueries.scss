@@ -1,96 +1,114 @@
-/* VISTA TABLET 992PX */
 
-@media screen and (max-width:992px) and (min-width:481px) {
+@media screen and (min-width:481px) and (max-width:992px){
+/* VISTA TABLET INDEX*/
 
-    /* VISTA TABLET INDEX*/
+.digipartner__logo {
+    width: 60px;
+}
 
-    .digipartner__logo {
-        width: 60px;
+.header__nav {
+    a {
+        margin-left: 8px;
+        margin-right: 8px;
+        justify-content: center;
     }
+}
 
-    .header__nav {
-        a {
-            margin-left: 8px;
-            margin-right: 8px;
-            justify-content: center;
-        }
-    }
+.slide {
+    height: 350px;
+    font-size: 50px;
+}
 
-    .slide {
-        height: 350px;
-        font-size: 50px;
-    }
+.nosotros {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "nosotros1 nosotros2"
+        "nosotros4 nosotros3"
+        "nosotros5 nosotros6";
+}
 
-    .nosotros {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas:
-            "nosotros1 nosotros2"
-            "nosotros4 nosotros3"
-            "nosotros5 nosotros6";
-    }
-
-    .nosotros1 {
-        text-align: center;
-        font-size: 15px;
-        height: 270px;
-        width: 100%;
-
-    }
-
-    .nosotros2 {
-        height: 270px;
-        width: 100%;
-    }
-
-    .nosotros4 {
-        height: 270px;
-        width: 100%;
-    }
-
-    .nosotros3 {
-        text-align: center;
-        font-size: 15px;
-        height: 270px;
-        width: 100%;
-
-    }
-
-    .nosotros5 {
-        text-align: center;
-        font-size: 15px;
-        height: 270px;
-        width: 100%;
-
-    }
-
-    .nosotros6 {
-        height: 270px;
-        width: 100%;
-    }
-
-    .promesa {
-        font-size: 11px;
-        height: 160px;
-
-    }
-
-    .footer {
-        font-size: 14px;
-        text-align: center;
-    }
+.nosotros1 {
+    text-align: center;
+    font-size: 15px;
+    height: 270px;
+    width: 100%;
 
 }
 
-/* VISTA MOBILE 480PX*/
+.nosotros2 {
+    height: 270px;
+    width: 100%;
+}
+
+.nosotros4 {
+    height: 270px;
+    width: 100%;
+}
+
+.nosotros3 {
+    text-align: center;
+    font-size: 15px;
+    height: 270px;
+    width: 100%;
+
+}
+
+.nosotros5 {
+    text-align: center;
+    font-size: 15px;
+    height: 270px;
+    width: 100%;
+
+}
+
+.nosotros6 {
+    height: 270px;
+    width: 100%;
+}
+
+.promesa {
+    font-size: 11px;
+    height: 160px;
+
+}
+
+.footer {
+    font-size: 14px;
+    text-align: center;
+}
+
+}
+
+/* VISTA TABLET CLIENTES */
+
+.slide__clientes {
+    height: 350px;
+    font-size: 50px;
+}
+
+.clientes__titulo {
+    font-size: 90px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clientes__contenedor {
+    height: 1000px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "cliente1 cliente2"
+        "cliente3 cliente4"
+        "cliente5 cliente6"
+        "cliente7 cliente8"
+}
+
 
 @media screen and (max-width:480px) {
 
-    /* VISTA MOBILE INDEX*/
-
-    .header {
-        height: 200px;
-    }
+    /* INDEX MOBILE*/
 
     .slide {
         height: 300px;
@@ -115,7 +133,7 @@
             "nosotros3"
             "nosotros4"
             "nosotros5"
-            "nosotros6"
+            "nosotros6";
     }
 
     .nosotros1 {
@@ -123,6 +141,8 @@
         font-size: 15px;
         height: 230px;
         width: 100%;
+
+
 
     }
 
@@ -168,5 +188,39 @@
     .footer {
         font-size: 12px;
     }
+
+}
+
+
+/* VISTA MOBILE CLIENTES */
+
+.slide__clientes {
+    height: 300px;
+    font-size: 50px;
+}
+
+.clientes__titulo {
+
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clientes__contenedor {
+    height: 1800px;
+    width: 480px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+        "cliente1"
+        "cliente2"
+        "cliente3"
+        "cliente4"
+        "cliente5"
+        "cliente6"
+        "cliente7"
+        "cliente8"
 
 }
