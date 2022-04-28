@@ -1,0 +1,4 @@
+Agregue Keywords, description, titulos y encabezados en todos los documentos .html
+Cada adición antes mencionada cumple con los objetivos estimados para alcanzar al publico objetivo deseado, esperando así con esta modificación mayores visualizaciones a futuro en los motores de busqueda de google de manera generica, no paga.
+Elimine las imágenes con texto para aplicar los textos desde html.
+Comprimí las imágenes en Adobe Photoshop para reducir su peso.
