@@ -1,130 +1,3 @@
-@media screen and (min-width: 481px) and (max-width: 992px) {
-  /* VISTA TABLET INDEX*/
-  .digipartner__logo {
-    width: 60px; }
-  .header__nav a {
-    margin-left: 8px;
-    margin-right: 8px;
-    justify-content: center; }
-  .slide, .slide__servicios, .slide__clientes, .slide__planes {
-    height: 350px;
-    font-size: 50px; }
-  .nosotros {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "nosotros1 nosotros2" "nosotros4 nosotros3" "nosotros5 nosotros6"; }
-  .nosotros1 {
-    text-align: center;
-    font-size: 15px;
-    height: 270px;
-    width: 100%; }
-  .nosotros2 {
-    height: 270px;
-    width: 100%; }
-  .nosotros4 {
-    height: 270px;
-    width: 100%; }
-  .nosotros3 {
-    text-align: center;
-    font-size: 15px;
-    height: 270px;
-    width: 100%; }
-  .nosotros5 {
-    text-align: center;
-    font-size: 15px;
-    height: 270px;
-    width: 100%; }
-  .nosotros6 {
-    height: 270px;
-    width: 100%; }
-  .promesa {
-    font-size: 11px;
-    height: 160px; }
-  .footer {
-    font-size: 14px;
-    text-align: center; } }
-
-/* VISTA TABLET CLIENTES */
-.slide__clientes {
-  height: 350px;
-  font-size: 50px; }
-
-.clientes__titulo {
-  font-size: 90px;
-  text-align: center;
-  font-weight: bold;
-  font-family: 'Roboto', sans-serif; }
-
-.clientes__contenedor {
-  height: 1000px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-areas: "cliente1 cliente2" "cliente3 cliente4" "cliente5 cliente6" "cliente7 cliente8"; }
-
-@media screen and (max-width: 480px) {
-  /* INDEX MOBILE*/
-  .slide, .slide__servicios, .slide__clientes, .slide__planes {
-    height: 300px;
-    font-size: 50px; }
-  .index__titulo {
-    font-size: 70px;
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif; }
-  .nosotros {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: "nosotros1" "nosotros2" "nosotros3" "nosotros4" "nosotros5" "nosotros6"; }
-  .nosotros1 {
-    text-align: center;
-    font-size: 15px;
-    height: 230px;
-    width: 100%; }
-  .nosotros2 {
-    height: 230px;
-    width: 100%; }
-  .nosotros3 {
-    text-align: center;
-    font-size: 15px;
-    height: 230px;
-    width: 100%; }
-  .nosotros4 {
-    height: 230px;
-    width: 100%; }
-  .nosotros5 {
-    text-align: center;
-    font-size: 15px;
-    height: 230px;
-    width: 100%; }
-  .nosotros6 {
-    height: 230px;
-    width: 100%; }
-  .promesa {
-    padding-top: 10px;
-    height: 200px;
-    font-size: 11px; }
-  .footer {
-    font-size: 12px; } }
-
-/* VISTA MOBILE CLIENTES */
-.slide__clientes {
-  height: 300px;
-  font-size: 50px; }
-
-.clientes__titulo {
-  font-size: 50px;
-  text-align: center;
-  font-weight: bold;
-  font-family: 'Roboto', sans-serif; }
-
-.clientes__contenedor {
-  height: 1800px;
-  width: 480px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-areas: "cliente1" "cliente2" "cliente3" "cliente4" "cliente5" "cliente6" "cliente7" "cliente8"; }
-
 * {
   margin: 0;
   padding: 0;
@@ -164,9 +37,6 @@ body {
     text-align: center;
     font-weight: bold;
     font-family: 'Roboto', sans-serif; }
-
-.index__main {
-  border: none; }
 
 .nosotros {
   background: linear-gradient(0deg, #5b5b5b 0%, white 59%);
@@ -320,22 +190,26 @@ body {
 /* SERVICOS ESCRITORIO */
 .slide__servicios {
   background-image: url(../imagenes/slide-servicios.png); }
-
-.servicios__titulo {
-  font-size: 150px;
-  text-align: center;
-  font-weight: bold;
-  font-family: 'Roboto', sans-serif; }
+  .slide__servicios h1 {
+    font-size: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; }
 
 .servicios {
   padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-around; }
 
 .carta {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start; }
+
+.card {
+  width: 20rem; }
 
 /* CLIENTES ESCRITORIO */
 .slide__clientes {
@@ -454,12 +328,11 @@ body {
 /* PLANES ESCRITORIO */
 .slide__planes {
   background-image: url(../imagenes/slide-planes.png); }
-
-.planes__titulo {
-  font-size: 150px;
-  text-align: center;
-  font-weight: bold;
-  font-family: 'Roboto', sans-serif; }
+  .slide__planes h1 {
+    font-size: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; }
 
 .planes__main {
   background: linear-gradient(0deg, #5b5b5b 0%, #7d7d7d 59%); }
@@ -475,36 +348,48 @@ body {
   height: 300px;
   margin-top: 50px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  background-color: white; }
+  background-color: white;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px; }
 
 .estandar {
   width: 200px;
   height: 300px;
   margin-top: 50px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  background-color: white; }
+  background-color: white;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px; }
 
 .avanzado {
   width: 200px;
   height: 300px;
   margin-top: 50px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  background-color: white; }
+  background-color: white;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px; }
 
 .premium {
   width: 200px;
   height: 300px;
   margin-top: 50px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  background-color: white; }
+  background-color: white;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px; }
 
 .banner__llamada {
   display: flex;
@@ -559,3 +444,277 @@ body {
   .btn:hover {
     background: #7d7d7d;
     border-color: #2a2a2a; }
+
+@media screen and (min-width: 481px) and (max-width: 992px) {
+  /* VISTA TABLET INDEX*/
+  .digipartner__logo {
+    width: 60px; }
+  .header__nav a {
+    margin-left: 8px;
+    margin-right: 8px;
+    justify-content: center; }
+  .slide, .slide__servicios, .slide__clientes, .slide__planes {
+    height: 350px;
+    font-size: 50px; }
+  .nosotros {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "nosotros1 nosotros2" "nosotros4 nosotros3" "nosotros5 nosotros6"; }
+  .nosotros1 {
+    text-align: center;
+    font-size: 15px;
+    height: 270px;
+    width: 100%; }
+  .nosotros2 {
+    height: 270px;
+    width: 100%; }
+  .nosotros4 {
+    height: 270px;
+    width: 100%; }
+  .nosotros3 {
+    text-align: center;
+    font-size: 15px;
+    height: 270px;
+    width: 100%; }
+  .nosotros5 {
+    text-align: center;
+    font-size: 15px;
+    height: 270px;
+    width: 100%; }
+  .nosotros6 {
+    height: 270px;
+    width: 100%; }
+  .promesa {
+    font-size: 11px;
+    height: 160px; }
+  .footer {
+    font-size: 14px;
+    text-align: center; }
+  /* VISTA TABLET SERVICIOS*/
+  .servicios {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around; }
+  .slide__servicios {
+    height: 350px;
+    font-size: 50px; }
+    .slide__servicios h1 {
+      font-size: 90px;
+      text-align: center;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif; }
+  /*VISTA TABLET PLANES*/
+  .slide__planes {
+    height: 350px;
+    font-size: 50px; }
+    .slide__planes h1 {
+      font-size: 90px;
+      text-align: center;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif; }
+  .planes__contenedor {
+    height: 550px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "basico estandar" "avanzado premium"; }
+    .planes__contenedor div {
+      height: 200px;
+      width: auto; }
+  .basico {
+    grid-area: basico; }
+  .estandar {
+    grid-area: estandar; }
+  .avanzado {
+    grid-area: avanzado; }
+  .premium {
+    grid-area: premium; }
+  /* VISTA TABLET CLIENTES */
+  .slide__clientes {
+    height: 350px;
+    font-size: 50px; }
+    .slide__clientes h1 {
+      font-size: 90px;
+      text-align: center;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif; }
+  .clientes__contenedor {
+    height: 1000px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "cliente1 cliente2" "cliente3 cliente4" "cliente5 cliente6" "cliente7 cliente8"; }
+  /* VISTA TABLET CONTACTO */
+  .mapa {
+    height: 350px; }
+  .contacto__titulo {
+    margin-top: 20px;
+    height: 100px;
+    font-size: 20px; }
+  .contacto {
+    padding-bottom: 20px; } }
+
+@media screen and (max-width: 480px) {
+  /* INDEX MOBILE*/
+  .slide, .slide__servicios, .slide__clientes, .slide__planes {
+    height: 270px; }
+    .slide h1, .slide__servicios h1, .slide__clientes h1, .slide__planes h1 {
+      font-size: 70px;
+      text-align: center;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif; }
+  .nosotros {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "nosotros1" "nosotros2" "nosotros3" "nosotros4" "nosotros5" "nosotros6"; }
+  .nosotros1 {
+    text-align: center;
+    font-size: 15px;
+    height: 230px;
+    width: 100%;
+    padding: 0px; }
+  .nosotros2 {
+    height: 230px;
+    width: 100%; }
+  .nosotros3 {
+    text-align: center;
+    font-size: 15px;
+    height: 230px;
+    padding: 0px; }
+  .nosotros4 {
+    height: 230px;
+    width: 100%; }
+  .nosotros5 {
+    text-align: center;
+    font-size: 15px;
+    height: 230px;
+    width: 100%; }
+    .nosotros5 p {
+      padding-left: 20px;
+      padding-right: 20px; }
+  .nosotros6 {
+    height: 230px;
+    width: 100%; }
+  .promesa {
+    padding-top: 10px;
+    height: 200px;
+    font-size: 11px; }
+  .footer {
+    font-size: 12px; }
+  /*SERVICIOS MOBILE*/
+  .carta {
+    padding-top: 20px; }
+  .card {
+    width: 16rem; }
+  .slide__servicios {
+    height: 270px; }
+    .slide__servicios h1 {
+      font-size: 50px;
+      text-align: center;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif; }
+  /* PLANES MOBILE */
+  .slide__planes {
+    height: 270px; }
+    .slide__planes h1 {
+      font-size: 60px;
+      text-align: center;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif; }
+  .planes__contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 1000px; }
+    .planes__contenedor div {
+      justify-content: center;
+      height: 200px;
+      width: auto; }
+  .basico {
+    width: 200px;
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px; }
+  .estandar {
+    width: 200px;
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px; }
+  .avanzado {
+    width: 200px;
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px; }
+  .premium {
+    width: 200px;
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px; }
+  .banner__llamada {
+    height: 240px;
+    flex-direction: column; }
+    .banner__llamada h2 {
+      text-align: center; }
+  .boton {
+    margin-top: 30px; }
+  /* CLIENTES MOBILE */
+  .slide__clientes {
+    height: 270px;
+    font-size: 50px; }
+    .slide__clientes h1 {
+      font-size: 60px;
+      text-align: center;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif; }
+  .clientes__contenedor {
+    height: 1800px;
+    width: 480px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: "cliente1" "cliente2" "cliente3" "cliente4" "cliente5" "cliente6" "cliente7" "cliente8"; }
+  /* CONTACTO MOBILE*/
+  .mapa {
+    height: 400px; }
+  .contacto__titulo {
+    margin-top: 30px;
+    height: 100px;
+    font-size: 20px; }
+  .contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-left: 40px; } }

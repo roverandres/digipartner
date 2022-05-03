@@ -1,5 +1,4 @@
 @import "variables";
-@import "mediaqueries";
 
 * {
     margin: 0;
@@ -54,14 +53,6 @@ body {
 
 
 }
-
-
-
-.index__main {
-
-    border: none;
-}
-
 
 .nosotros {
     background: linear-gradient(0deg, rgba(91, 91, 91, 1) 0%, rgba(255, 255, 255, 1) 59%);
@@ -236,21 +227,20 @@ $color in $redes {
 .slide__servicios {
     @extend .slide;
     background-image: url(../imagenes/slide-servicios.png);
+    h1 {
 
-}
-
-.servicios__titulo {
-
-    font-size: 150px;
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-
+        font-size: 150px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+    }
 }
 
 .servicios {
     padding-top: 20px;
     padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .carta {
@@ -258,6 +248,9 @@ $color in $redes {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+}
+.card {
+    width: 20rem;
 }
 
 
@@ -268,12 +261,10 @@ $color in $redes {
     background-image: url(../imagenes/slide-clientes.png);
 
     h1 {
-
         font-size: 150px;
         text-align: center;
         font-weight: bold;
         font-family: 'Roboto', sans-serif;
-
     }
 }
 
@@ -396,15 +387,14 @@ $color in $redes {
 @extend .slide;
 background-image: url(../imagenes/slide-planes.png);
 
-}
-
-.planes__titulo {
+h1 {
 
     font-size: 150px;
     text-align: center;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
 
+}
 }
 
 .planes__main {
@@ -426,10 +416,12 @@ background-image: url(../imagenes/slide-planes.png);
     height: 300px;
     margin-top: 50px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     background-color: $colortitulo;
-    
+    text-align: center;
+margin-left: 20px;
+margin-right: 20px;    
 }
 
 .basico {
@@ -519,3 +511,6 @@ background-image: url(../imagenes/slide-planes.png);
     
     }
 }
+
+@import "mediaqueries";
+
