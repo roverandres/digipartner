@@ -90,6 +90,8 @@ body {
 
     h1 {
         transform: rotate(358deg);
+        font-weight: bold;
+
     }
 }
 
@@ -100,6 +102,7 @@ body {
     background-image: url(../imagenes/n1.jpg);
     transition: all 1s;
     @include NosConfig;
+
     &:hover {
         filter: grayscale(100%);
     }
@@ -116,8 +119,10 @@ body {
     justify-content: center;
     background-image: url(../imagenes/n5.png);
     @include NosConfig;
+
     h2 {
         transform: rotate(1deg);
+        font-weight: bold;
     }
 }
 
@@ -127,6 +132,7 @@ body {
     background-image: url(../imagenes/n2.jpg);
     transition: all 1s;
     @include NosConfig;
+
     &:hover {
         filter: grayscale(100%);
     }
@@ -139,8 +145,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
     background-image: url(../imagenes/n6.png);
     @include NosConfig;
+
+    h1 {
+        font-weight: bold;
+
+    }
 }
 
 .nosotros6 {
@@ -191,8 +204,6 @@ body {
     }
 }
 
-
-
 .footer__direccion {
     text-align: right;
 }
@@ -227,6 +238,7 @@ $color in $redes {
 .slide__servicios {
     @extend .slide;
     background-image: url(../imagenes/slide-servicios.png);
+
     h1 {
 
         font-size: 150px;
@@ -240,7 +252,7 @@ $color in $redes {
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .carta {
@@ -249,134 +261,30 @@ $color in $redes {
     justify-content: center;
     align-items: flex-start;
 }
+
 .card {
     width: 20rem;
-}
+    border: none !important;
 
-
-/* CLIENTES ESCRITORIO */
-
-.slide__clientes {
-    @extend .slide;
-    background-image: url(../imagenes/slide-clientes.png);
-
-    h1 {
-        font-size: 150px;
-        text-align: center;
-        font-weight: bold;
-        font-family: 'Roboto', sans-serif;
+    img {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
     }
-}
-
-
-
-.clientes__main {
-    background-color: rgba(91, 91, 91, 1);
-
-}
-
-.clientes__contenedor {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 16%, rgba(203, 203, 203, 1) 92%);
-    height: 500px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "cliente1 cliente2 cliente3 cliente4"
-        "cliente5 cliente6 cliente7 cliente8";
 
     div {
-        width: 150px;
-        height: 150px;
-        align-self: center;
-        justify-self: center;
-        font-size: 100px;
         text-align: center;
-        font-weight: bold;
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-        vertical-align: center;
-        color: white;
-    }
+        width: 100%;
+        display: flex;
+        flex-direction: column;
 
-
-    a {
-        width: 150px;
-        height: 150px;
-        align-self: center;
-        justify-self: center;
-        font-size: 100px;
-        text-align: center;
-        font-weight: bold;
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-        vertical-align: center;
-        color: white;
-    }
-
-}
-
-.cliente-1 {
-    grid-area: cliente1;
-    background-image: url(../imagenes/casamolle-logo.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: all 1s;
-
-    &:hover {
-        filter: grayscale(100%);
-    }
-}
-
-
-
-
-/* BUCLE */
-
-@for $i from 2 through 8 {
-    .cliente-#{$i} {
-        grid-area: cliente#{$i};
-        background-color: #5b5b5b;
-    }
-}
-
-
-.banner__llamada {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    height: 100px;
-
-}
-
-.planes__frase {
-    color: white;
-    margin-right: 30px;
-}
-
-.boton {
-    background-color: #2a2a2a;
-    height: 60px;
-    border-style: inset;
-    border-color: white;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-
-    &:hover {
-        background: #464646;
-    }
-
-    a {
-        color: white;
+        h2 {
+            font-weight: bold;
+            background: -webkit-linear-gradient(#9f63ba, #7faad4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 }
 
@@ -384,17 +292,17 @@ $color in $redes {
 /* PLANES ESCRITORIO */
 
 .slide__planes {
-@extend .slide;
-background-image: url(../imagenes/slide-planes.png);
+    @extend .slide;
+    background-image: url(../imagenes/slide-planes.png);
 
-h1 {
+    h1 {
 
-    font-size: 150px;
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+        font-size: 150px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
 
-}
+    }
 }
 
 .planes__main {
@@ -404,25 +312,36 @@ h1 {
 
 .planes__contenedor {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
-    height: 400px;
+    height: 380px;
+
+    h1 {
+        font-weight: bold;
+        font-size: 35px;
+    }
+    h2 {
+        font-weight: bold;
+    }
 
 }
 
 
 @mixin PlanesBox {
-    width: 200px;
+    width: 220px;
     height: 300px;
     margin-top: 50px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: $colortitulo;
     text-align: center;
-margin-left: 20px;
-margin-right: 20px;    
+    margin-left: 10px;
+    margin-right: 10px;
 }
+
+
 
 .basico {
     @include PlanesBox;
@@ -450,11 +369,11 @@ margin-right: 20px;
     width: 100%;
     height: 100px;
 
-}
+    h2 {
+        color: white;
+        margin-right: 30px;
+    }
 
-.planes__frase {
-    color: white;
-    margin-right: 30px;
 }
 
 .boton {
@@ -471,6 +390,122 @@ margin-right: 20px;
     margin: 4px 2px;
     cursor: pointer;
 
+}
+
+
+/* CLIENTES ESCRITORIO */
+
+.slide__clientes {
+    @extend .slide;
+    background-image: url(../imagenes/slide-clientes.png);
+
+    h1 {
+        font-size: 150px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+
+
+.clientes__main {
+    background-color: rgba(91, 91, 91, 1);
+
+}
+
+.clientes__contenedor {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 16%, rgba(203, 203, 203, 1) 92%);
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "cliente1 cliente2 cliente3 cliente4"
+        "cliente5 cliente6 cliente7 cliente8";
+padding-top: 50px;
+    div {
+        width: 150px;
+        height: 150px;
+        align-self: flex-start;
+        justify-self: center;
+        font-size: 100px;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        color: white;
+    }
+
+
+
+}
+
+
+.CasaMolle{
+    grid-area: cliente1;
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    align-items: center;
+    text-align: center;
+    h1{
+        padding-top: 10px;
+    }
+    p {font-size: 15px;
+
+    }
+}
+
+.cliente-1 {
+    background-image: url(../imagenes/casamolle-logo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s;
+
+
+    &:hover {
+        filter: grayscale(100%);
+    }
+}
+
+
+
+
+/* BUCLE */
+
+@for $i from 2 through 8 {
+    .cliente-#{$i} {
+        grid-area: cliente#{$i};
+        background-color: #5b5b5b;
+    }
+}
+
+
+
+.boton {
+    background-color: #2a2a2a;
+    height: 60px;
+    border-style: inset;
+    border-color: white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    &:hover {
+        background: #464646;
+    }
+
+    a {
+        color: white;
+    }
 }
 
 /* CONTACTO ESCRITORIO */
@@ -491,7 +526,9 @@ margin-right: 20px;
     align-items: center;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    h1{
+        font-weight: bold;
+    }
 }
 
 
@@ -504,13 +541,13 @@ margin-right: 20px;
 
     background-color: #464646;
     border-color: #2a2a2a;
+
     &:hover {
         background: rgba(125, 125, 125, 1);
         border-color: #2a2a2a;
-    
-    
+
+
     }
 }
 
 @import "mediaqueries";
-
